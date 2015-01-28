@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
+<hibernate-reverse-engineering>
+  <schema-selection match-catalog="sisap_v8"/>
+  <table-filter match-name="procedimiento_has_actividad"/>
+  <table-filter match-name="recurso"/>
+  <table-filter match-name="prioridad"/>
+  <table-filter match-name="direccion"/>
+  <table-filter match-name="plantel_has_recurso"/>
+  <table-filter match-name="medio_difusion"/>
+  <table-filter match-name="categoria_has_tipo"/>
+  <table-filter match-name="protocolo"/>
+  <table-filter match-name="notificacion"/>
+  <table-filter match-name="categoria"/>
+  <table-filter match-name="procedimiento"/>
+  <table-filter match-name="tipo"/>
+  <table-filter match-name="clave"/>
+  <table-filter match-name="archivo"/>
+  <table-filter match-name="actividad"/>
+  <table-filter match-name="protocolo_has_procedimiento"/>
+  <table-filter match-name="usuario"/>
+  <table-filter match-name="estado"/>
+  <table-filter match-name="plantel"/>
+  <table-filter match-name="notificacion_has_medio_difusion"/>
+  <table-filter match-name="denuncia"/>
+</hibernate-reverse-engineering>

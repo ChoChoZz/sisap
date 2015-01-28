@@ -1,0 +1,85 @@
+.col-centered{
+	float: none;
+	margin: 0px auto;
+}
+
+#cuerpo{
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+#tmonitor{
+    padding-bottom: 50px;
+}
+
+#titulo{
+	padding-bottom: 40px;
+}
+
+.form-horizontal{
+	padding-bottom: 40px;
+}
+
+#tipoSelect{
+	padding-top: 10px;
+	padding-bottom: 20px;
+}
+
+#cuerpo h3{
+	padding-bottom: 20px;
+}
+
+#botones{
+	padding-top: 20px;
+	padding-bottom: 30px;
+}
+
+.resizable(@direction: both) {
+  /*Options: horizontal, vertical, both*/
+  resize: @direction;
+  /* Safari fix */
+  overflow: auto;
+}
+
+.element{
+	width: 8.3333%;
+}
+
+#open-popup {padding:20px}
+.white-popup {
+  position: relative;
+  background: #FFF;
+  padding: 40px;
+  width: auto;
+  max-width: 200px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+#description{
+	padding: 20px;
+}
+
+.color1{
+	color: rgba(109, 26, 66, 1.0);
+}
+
+.color2{
+	color:#BCBCBC;
+}
+
+.color3{
+	color: #E9E9E9;
+}
+
+.color4{
+	color: #E97F02;
+}
+
+.color5{
+	color: #00B4FF;
+}
+
+.colo6{
+	color: #515151;
+}

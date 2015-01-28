@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv= "Content-Type" content="text/html;charset=ISO-8859-1">
+		<link rel="stylesheet" href="./css/bootstrap.min.css">
+		<link rel="stylesheet" href="./css/bootstrap.css">
+		<link rel="stylesheet" href="./css/monitor.css">
+
+		<!-- formFull -->
+		<link rel="stylesheet" type="text/css" href="css/formFull/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/formFull/component.css" />
+		<link rel="stylesheet" type="text/css" href="css/formFull/cs-select.css" />
+		<link rel="stylesheet" type="text/css" href="css/formFull/cs-skin-boxes.css" />
+
+		<script src="./js/formFull/modernizr.custom.js"></script>
+		<script src="./js/jquery.js"></script>
+  		<script src="./js/bootstrap.min.js"></script>
+	<title>SISAP</title>
+</head>
+<body>
+	<div class="container">
+		<div class="page-header">
+			<h1 class="color1">SISAP
+				<small>Sistema para la atenci&oacute;n a la denuncia</small>
+			</h1>
+		</div>
+			<div class="fs-form-wrap" id="fs-form-wrap">
+
+				<form id="myform" class="fs-form fs-form-full" autocomplete="off" action="./html/home.jsp">
+					<ol class="fs-fields">
+						<li>
+							<label class="fs-field-label fs-anim-upper" for="usuario">Correo electr&oacute;nico:</label>
+							<input class="fs-anim-lower color2" id="usuario" name="usuario" type="email" placeholder="grodriguez@ipn.com.mx" required/>
+						</li>
+						<li>
+							<label class="fs-field-label fs-anim-upper" for="password">Contrase&ntilde;a:</label>
+							<input class="fs-anim-lower color2" id="password" name="password" type="password" required/>
+						</li>
+					</ol><!-- /fs-fields -->
+					<button class="fs-submit" type="submit">Enviar respuestas</button>
+				</form><!-- /fs-form -->
+			</div><!-- /fs-form-wrap -->
+
+
+		</div><!-- /container -->
+		<script src="./js/formFull/classie.js"></script>
+		<script src="./js/formFull/selectFx.js"></script>
+		<script src="./js/formFull/fullscreenForm.js"></script>
+		<script>
+			(function() {
+				var formWrap = document.getElementById( 'fs-form-wrap' );
+
+				[].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {	
+					new SelectFx( el, {
+						stickyPlaceholder: false,
+						onChange: function(val){
+							document.querySelector('span.cs-placeholder').style.backgroundColor = val;
+						}
+					});
+				} );
+
+				new FForm( formWrap, {
+					onReview : function() {
+						classie.add( document.body, 'overview' ); // for demo purposes only
+					}
+				} );
+			})();
+		</script>
+</body>
+</html>

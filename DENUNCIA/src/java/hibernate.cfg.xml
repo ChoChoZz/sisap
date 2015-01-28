@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/sisap_v8</property>
+    <property name="hibernate.connection.username">root</property>
+    <property name="hibernate.connection.password">root</property>
+    <property name="hibernate.show_sql">true</property>
+    <mapping class="com.entidad.Plantel"/>
+    <mapping class="com.entidad.Actividad"/>
+    <mapping class="com.entidad.Archivo"/>
+    <mapping class="com.entidad.Categoria"/>
+    <mapping class="com.entidad.Clave"/>
+    <mapping class="com.entidad.ClaveId"/>
+    <mapping class="com.entidad.Denuncia"/>
+    <mapping class="com.entidad.DenunciaId"/>
+    <mapping class="com.entidad.Direccion"/>
+    <mapping class="com.entidad.Estado"/>
+    <mapping class="com.entidad.MedioDifusion"/>
+    <mapping class="com.entidad.Notificacion"/>
+    <mapping class="com.entidad.PlantelHasRecurso"/>
+    <mapping class="com.entidad.PlantelHasRecursoId"/>
+    <mapping class="com.entidad.PlantelId"/>
+    <mapping class="com.entidad.Prioridad"/>
+    <mapping class="com.entidad.Procedimiento"/>
+    <mapping class="com.entidad.ProcedimientoId"/>
+    <mapping class="com.entidad.Protocolo"/>
+    <mapping class="com.entidad.ProtocoloId"/>
+    <mapping class="com.entidad.Recurso"/>
+    <mapping class="com.entidad.Tipo"/>
+    <mapping class="com.entidad.Usuario"/>
+    <mapping class="com.entidad.UsuarioId"/>
+    
+  </session-factory>
+</hibernate-configuration>
