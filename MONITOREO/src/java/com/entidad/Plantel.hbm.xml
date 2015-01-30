@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 29/01/2015 10:51:11 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="com.entidad.Plantel" table="plantel" catalog="sisap_v8">
+        <composite-id name="id" class="com.entidad.PlantelId">
+            <key-property name="idPlantel" type="int">
+                <column name="idPLANTEL" />
+            </key-property>
+            <key-property name="direccionIdDireccion" type="int">
+                <column name="DIRECCION_idDIRECCION" />
+            </key-property>
+        </composite-id>
+        <property name="nombre" type="string">
+            <column name="nombre" length="100" not-null="true" />
+        </property>
+        <property name="telefono" type="string">
+            <column name="telefono" length="45" not-null="true" />
+        </property>
+        <property name="extension" type="string">
+            <column name="extension" length="45" />
+        </property>
+    </class>
+</hibernate-mapping>

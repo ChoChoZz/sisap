@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 29/01/2015 10:51:11 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="com.entidad.Tipo" table="tipo" catalog="sisap_v8">
+        <id name="idTipo" type="int">
+            <column name="idTIPO" />
+            <generator class="assigned" />
+        </id>
+        <property name="descripcion" type="string">
+            <column name="descripcion" length="45" not-null="true" />
+        </property>
+        <set name="categorias" table="categoria_has_tipo" inverse="false" lazy="true" fetch="select">
+            <key>
+                <column name="TIPO_idTIPO" not-null="true" />
+            </key>
+            <many-to-many entity-name="com.entidad.Categoria">
+                <column name="CATEGORIA_idCATEGORIA" not-null="true" />
+            </many-to-many>
+        </set>
+    </class>
+</hibernate-mapping>

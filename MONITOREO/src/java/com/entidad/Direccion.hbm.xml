@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 29/01/2015 10:51:11 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="com.entidad.Direccion" table="direccion" catalog="sisap_v8">
+        <id name="idDireccion" type="int">
+            <column name="idDIRECCION" />
+            <generator class="assigned" />
+        </id>
+        <property name="calle" type="string">
+            <column name="calle" length="45" not-null="true" />
+        </property>
+        <property name="colonia" type="string">
+            <column name="colonia" length="45" not-null="true" />
+        </property>
+        <property name="codigoPostal" type="string">
+            <column name="codigo_postal" length="45" not-null="true" />
+        </property>
+        <property name="ciudad" type="string">
+            <column name="ciudad" length="45" />
+        </property>
+        <property name="estado" type="string">
+            <column name="estado" length="45" not-null="true" />
+        </property>
+        <property name="numeroExterior" type="string">
+            <column name="numero_exterior" length="45" />
+        </property>
+        <property name="numeroInterior" type="string">
+            <column name="numero_interior" length="45" />
+        </property>
+    </class>
+</hibernate-mapping>

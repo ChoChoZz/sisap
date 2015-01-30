@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 29/01/2015 10:51:11 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="com.entidad.PlantelHasRecurso" table="plantel_has_recurso" catalog="sisap_v8">
+        <composite-id name="id" class="com.entidad.PlantelHasRecursoId">
+            <key-property name="plantelIdPlantel" type="int">
+                <column name="PLANTEL_idPLANTEL" />
+            </key-property>
+            <key-property name="recursoIdRecurso" type="int">
+                <column name="RECURSO_idRECURSO" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

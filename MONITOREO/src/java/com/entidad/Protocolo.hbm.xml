@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 29/01/2015 10:51:11 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="com.entidad.Protocolo" table="protocolo" catalog="sisap_v8">
+        <id name="idProtocolo" type="int">
+            <column name="idPROTOCOLO" />
+            <generator class="assigned" />
+        </id>
+        <version name="version" type="string">
+            <column name="version" length="45" />
+        </version>
+        <property name="nombre" type="string">
+            <column name="nombre" length="100" not-null="true" />
+        </property>
+        <property name="descripcion" type="string">
+            <column name="descripcion" length="500" not-null="true" />
+        </property>
+        <property name="objetivo" type="string">
+            <column name="objetivo" length="100" />
+        </property>
+        <property name="leyes" type="string">
+            <column name="leyes" length="500" />
+        </property>
+        <set name="procedimientos" table="protocolo_has_procedimiento" inverse="false" lazy="true" fetch="select">
+            <key>
+                <column name="PROTOCOLO_idPROTOCOLO" not-null="true" />
+            </key>
+            <many-to-many entity-name="com.entidad.Procedimiento">
+                <column name="PROCEDIMIENTO_idPROCEDIMIENTO" not-null="true" />
+            </many-to-many>
+        </set>
+    </class>
+</hibernate-mapping>
