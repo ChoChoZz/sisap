@@ -120,13 +120,13 @@
 					  <div class="form-group">
 					    <label for="identificador" class="col-lg-2 control-label">Nombre:</label>
 					    <div class="col-lg-4">
-					      <input type="text" class="form-control" id="identificador" placeholder="Nombre(s):" required title="Ingresa un nombre">
+					      <input type="text" class="form-control" id="nombre" placeholder="Nombre(s):" required title="Ingresa un nombre">
 					    </div>
 					    <div class="col-lg-3">
-					      <input type="text" class="form-control" id="identificador" placeholder="Primer apellido" required title="Ingresa el primer apellido">
+					      <input type="text" class="form-control" id="pApellido" placeholder="Primer apellido" required title="Ingresa el primer apellido">
 					    </div>
 					    <div class="col-lg-3">
-					      <input type="text" class="form-control" id="identificador" placeholder="Segundo apellido" required title="Ingresa un segundo apellido">
+					      <input type="text" class="form-control" id="sApellido" placeholder="Segundo apellido" required title="Ingresa un segundo apellido">
 					    </div>
 
 					  </div>
@@ -180,7 +180,7 @@
 					  <div class="form-group">
 					    <label for="correo" class="col-lg-2 control-label">Correo:</label>
 					    <div class="col-lg-10">
-					      <input type="email" class="form-control" id="correo" placeholder="grodriguez@ipn.com.mx">
+					      <input type="email" class="form-control" id="correo" placeholder="ejemplo@ipn.com.mx">
 					    </div>
 					  </div>
 
