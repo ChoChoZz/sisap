@@ -17,8 +17,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author jonathanespina
  */
-@WebServlet(name = "ServletRegistrartUsuario", urlPatterns = {"/ServletRegistrarUsuario"})
-public class ServletRegistrarUsuario extends HttpServlet {
+@WebServlet(name = "ServletRegistrarPlantel", urlPatterns = {"/ServletRegistrarPlantel"})
+public class ServletRegistrarPlantel extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -62,27 +62,19 @@ public class ServletRegistrarUsuario extends HttpServlet {
             throws ServletException, IOException {
         processRequest(request, response);
         
-        String nombre = request.getParameter("nombre");
-        String pApellido = request.getParameter("pApellido");
-        String sApellido = request.getParameter("sApellido");
+        String nombre = request.getParameter("identificador");
         String tipo = request.getParameter("tipo");
-        String plantel = request.getParameter("plantel");
-        String identificador = request.getParameter("identificador");
-        String correo = request.getParameter("correo");
-        String contrasenia1 = request.getParameter("contrasenia1");
-        String contrasenia2 = request.getParameter("contrasenia2");
-        String sexo = request.getParameter("sexo");
-        int edad = Integer.parseInt(request.getParameter("edad"));
         String telefono = request.getParameter("telefono");
-        String movil = request.getParameter("movil");
-        String sangre = request.getParameter("sangre");
+        String extension = request.getParameter("extension");
+     //direccion   
+        String calle = request.getParameter("calle");
+        String colonia = request.getParameter("colonia");
+        String cp = request.getParameter("cp");
+        String ciudad = request.getParameter("ciudad");
+        String estado = request.getParameter("estado");
+        String numero = request.getParameter("numero");
+     
         
-        
-        int status = 1;
-        
-        
-        System.out.println(" "+nombre+" "+pApellido+" "+sApellido+" "+tipo+" "+plantel+" "+identificador+" "+correo+" "+contrasenia1+" "
-                + " "+contrasenia2+" "+sexo+" "+edad+" "+telefono+" "+movil+" "+sangre);
         
     }
 

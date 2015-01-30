@@ -111,24 +111,25 @@
 			<div class="row">
 				<div class="col-xs-2"></div>
 				<div class="col-xs-8">
-					<form class="form-horizontal" role="form">
+                                    <form class="form-horizontal" role="form" action="../ServletRegistrarPlantel" method="post">
 					  
 					  <div class="form-group">
 					    <label for="identificador" class="col-lg-2 control-label">Nombre:</label>
 					    <div class="col-lg-10">
-					      <input type="text" class="form-control" id="identificador" placeholder="Nombre de la Plantel o plantel" required title="Ingresa el nombre del plantel">
+                                                <input type="text" name="identificador" class="form-control" id="identificador" placeholder="Nombre de la institución o plantel" required title="Ingresa el nombre del plantel">
 					    </div>
 					  </div>
 
 				      <div class="form-group">
 					    <label for="institucion" class="col-lg-2 control-label">Tipo:</label>
 					    <div class="col-lg-10">
-					      <select name="" id="" class="form-control">
-					      		<option>Escuela de nivel superior</option>
-						      	<option>Escuela de nivel medio superior</option>
-						      	<option>Plantel Administrativo</option>
-								<option>Cendis</option>
-								<option>Otro</option>
+					      <select name="tipo" id="tipo" class="form-control">
+                                                  <option value="1">Escuela de nivel medio superior</option>
+						  <option value="2">Escuela de nivel superior</option>
+						  <option value="3">CENDI</option>
+                                                  <option value="4">Plantel Administrativo</option>
+                                                  <option value="5">Investigaci&oacute;n</option>
+                                                  <option value="6">Otro</option>
 					      </select>
 					    </div>
 					  </div>
@@ -136,7 +137,17 @@
 					<div class="form-group">
 					    <label for="boleta" class="col-lg-2 control-label">Direcci&oacute;n:</label>
 					    <div class="col-lg-10">
-					      <input type="text" class="form-control" id="boleta" placeholder="Direcci&oacute;n" required>
+                                                <input type="text" class="form-control" name="calle" placeholder="Calle" required>
+                                                <br>
+                                                <input type="text" class="form-control" name="colonia" placeholder="Colonia" required>
+                                                <br>
+                                                <input type="text" class="form-control" name="cp" placeholder="C.P." required>
+                                                <br>
+                                                <input type="text" class="form-control" name="ciudad" placeholder="Ciudad" required>
+                                                <br>
+                                                <input type="text" class="form-control" name="estado" placeholder="Estado" required>
+                                                <br>
+                                                <input type="text" class="form-control" name="numero" placeholder="N&uacute;mero" required>
 					    </div>
 					</div>
 
@@ -153,10 +164,10 @@
 					<div class="form-group">
 					    <label for="telefonoFijo" class="col-lg-2 control-label">Tel&eacute;fono:</label>
 					    <div class="col-lg-5">
-					      <input type="text" class="form-control" id="telefonoFijo" placeholder="Telefono fijo" required>
+                                                <input type="text" class="form-control" id="telefono" name="telefono" placeholder="Tel&eacute;fono fijo" required>
 					    </div>
 					    <div class="col-lg-5">
-					      <input type="password" class="form-control" id="telefonoMovil" placeholder="Extensi&oacute;n">
+                                                <input type="text" class="form-control" id="extension" name="extension" placeholder="Extensi&oacute;n">
 					    </div>
 					  </div>
 
