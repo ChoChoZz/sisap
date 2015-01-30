@@ -1,5 +1,5 @@
 package com.entidad;
-// Generated 29/01/2015 10:51:11 PM by Hibernate Tools 3.6.0
+// Generated 30/01/2015 10:21:59 AM by Hibernate Tools 3.6.0
 
 
 import java.util.HashSet;
@@ -11,37 +11,40 @@ import java.util.Set;
 public class Protocolo  implements java.io.Serializable {
 
 
-     private int idProtocolo;
+     private Integer idProtocolo;
      private String version;
      private String nombre;
      private String descripcion;
      private String objetivo;
      private String leyes;
-     private Set procedimientos = new HashSet(0);
+     private String status;
+     private Set actividads = new HashSet(0);
+     private Set claves = new HashSet(0);
 
     public Protocolo() {
     }
 
 	
-    public Protocolo(int idProtocolo, String nombre, String descripcion) {
-        this.idProtocolo = idProtocolo;
+    public Protocolo(String nombre, String descripcion, String objetivo) {
         this.nombre = nombre;
         this.descripcion = descripcion;
+        this.objetivo = objetivo;
     }
-    public Protocolo(int idProtocolo, String nombre, String descripcion, String objetivo, String leyes, Set procedimientos) {
-       this.idProtocolo = idProtocolo;
+    public Protocolo(String nombre, String descripcion, String objetivo, String leyes, String status, Set actividads, Set claves) {
        this.nombre = nombre;
        this.descripcion = descripcion;
        this.objetivo = objetivo;
        this.leyes = leyes;
-       this.procedimientos = procedimientos;
+       this.status = status;
+       this.actividads = actividads;
+       this.claves = claves;
     }
    
-    public int getIdProtocolo() {
+    public Integer getIdProtocolo() {
         return this.idProtocolo;
     }
     
-    public void setIdProtocolo(int idProtocolo) {
+    public void setIdProtocolo(Integer idProtocolo) {
         this.idProtocolo = idProtocolo;
     }
     public String getVersion() {
@@ -79,12 +82,26 @@ public class Protocolo  implements java.io.Serializable {
     public void setLeyes(String leyes) {
         this.leyes = leyes;
     }
-    public Set getProcedimientos() {
-        return this.procedimientos;
+    public String getStatus() {
+        return this.status;
     }
     
-    public void setProcedimientos(Set procedimientos) {
-        this.procedimientos = procedimientos;
+    public void setStatus(String status) {
+        this.status = status;
+    }
+    public Set getActividads() {
+        return this.actividads;
+    }
+    
+    public void setActividads(Set actividads) {
+        this.actividads = actividads;
+    }
+    public Set getClaves() {
+        return this.claves;
+    }
+    
+    public void setClaves(Set claves) {
+        this.claves = claves;
     }
 
 

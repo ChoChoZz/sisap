@@ -1,5 +1,5 @@
 package com.entidad;
-// Generated 29/01/2015 10:51:11 PM by Hibernate Tools 3.6.0
+// Generated 30/01/2015 10:21:59 AM by Hibernate Tools 3.6.0
 
 
 import java.util.HashSet;
@@ -11,29 +11,27 @@ import java.util.Set;
 public class Tipo  implements java.io.Serializable {
 
 
-     private int idTipo;
+     private Integer idTipo;
      private String descripcion;
-     private Set categorias = new HashSet(0);
+     private Set claves = new HashSet(0);
 
     public Tipo() {
     }
 
 	
-    public Tipo(int idTipo, String descripcion) {
-        this.idTipo = idTipo;
+    public Tipo(String descripcion) {
         this.descripcion = descripcion;
     }
-    public Tipo(int idTipo, String descripcion, Set categorias) {
-       this.idTipo = idTipo;
+    public Tipo(String descripcion, Set claves) {
        this.descripcion = descripcion;
-       this.categorias = categorias;
+       this.claves = claves;
     }
    
-    public int getIdTipo() {
+    public Integer getIdTipo() {
         return this.idTipo;
     }
     
-    public void setIdTipo(int idTipo) {
+    public void setIdTipo(Integer idTipo) {
         this.idTipo = idTipo;
     }
     public String getDescripcion() {
@@ -43,12 +41,12 @@ public class Tipo  implements java.io.Serializable {
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
-    public Set getCategorias() {
-        return this.categorias;
+    public Set getClaves() {
+        return this.claves;
     }
     
-    public void setCategorias(Set categorias) {
-        this.categorias = categorias;
+    public void setClaves(Set claves) {
+        this.claves = claves;
     }
 
 

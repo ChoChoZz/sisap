@@ -4,25 +4,20 @@
   <session-factory>
     <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
     <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/sisap_v8</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/sisap</property>
     <property name="hibernate.connection.username">root</property>
-    <property name="hibernate.connection.password">root</property>
-    <mapping resource="com/entidad/MedioDifusion.hbm.xml"/>
-    <mapping resource="com/entidad/Usuario.hbm.xml"/>
-    <mapping resource="com/entidad/Estado.hbm.xml"/>
-    <mapping resource="com/entidad/Denuncia.hbm.xml"/>
-    <mapping resource="com/entidad/PlantelHasRecurso.hbm.xml"/>
-    <mapping resource="com/entidad/Procedimiento.hbm.xml"/>
+    <property name="hibernate.connection.password">Password1</property>
     <mapping resource="com/entidad/Notificacion.hbm.xml"/>
-    <mapping resource="com/entidad/Categoria.hbm.xml"/>
     <mapping resource="com/entidad/Plantel.hbm.xml"/>
-    <mapping resource="com/entidad/Direccion.hbm.xml"/>
+    <mapping resource="com/entidad/Actividad.hbm.xml"/>
+    <mapping resource="com/entidad/Area.hbm.xml"/>
+    <mapping resource="com/entidad/Protocolo.hbm.xml"/>
+    <mapping resource="com/entidad/Denuncia.hbm.xml"/>
+    <mapping resource="com/entidad/Prioridad.hbm.xml"/>
+    <mapping resource="com/entidad/Usuario.hbm.xml"/>
+    <mapping resource="com/entidad/Tipo.hbm.xml"/>
     <mapping resource="com/entidad/Recurso.hbm.xml"/>
     <mapping resource="com/entidad/Archivo.hbm.xml"/>
-    <mapping resource="com/entidad/Prioridad.hbm.xml"/>
-    <mapping resource="com/entidad/Protocolo.hbm.xml"/>
-    <mapping resource="com/entidad/Actividad.hbm.xml"/>
-    <mapping resource="com/entidad/Tipo.hbm.xml"/>
     <mapping resource="com/entidad/Clave.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>

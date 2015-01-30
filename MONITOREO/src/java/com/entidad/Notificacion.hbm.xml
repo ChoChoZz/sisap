@@ -1,26 +1,38 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated 29/01/2015 10:51:11 PM by Hibernate Tools 3.6.0 -->
+<!-- Generated 30/01/2015 10:22:00 AM by Hibernate Tools 3.6.0 -->
 <hibernate-mapping>
-    <class name="com.entidad.Notificacion" table="notificacion" catalog="sisap_v8">
-        <id name="idNotificacion" type="int">
-            <column name="idNOTIFICACION" />
-            <generator class="assigned" />
-        </id>
+    <class name="com.entidad.Notificacion" table="notificacion" catalog="sisap">
+        <composite-id name="id" class="com.entidad.NotificacionId">
+            <key-property name="idNotificacion" type="int">
+                <column name="idNOTIFICACION" />
+            </key-property>
+            <key-property name="idUsuario" type="string">
+                <column name="idUSUARIO" length="20" />
+            </key-property>
+            <key-property name="idPlantel" type="int">
+                <column name="idPLANTEL" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="usuario" class="com.entidad.Usuario" update="false" insert="false" fetch="select">
+            <column name="idUSUARIO" length="20" not-null="true" />
+            <column name="idPLANTEL" not-null="true" />
+        </many-to-one>
         <property name="asunto" type="string">
             <column name="asunto" length="200" not-null="true" />
         </property>
         <property name="descripcion" type="string">
             <column name="descripcion" length="500" not-null="true" />
         </property>
-        <set name="medioDifusions" table="notificacion_has_medio_difusion" inverse="false" lazy="true" fetch="select">
-            <key>
-                <column name="NOTIFICACION_idNOTIFICACION" not-null="true" />
-            </key>
-            <many-to-many entity-name="com.entidad.MedioDifusion">
-                <column name="MEDIO_DIFUSION_idMEDIO_DIFUSION" not-null="true" />
-            </many-to-many>
-        </set>
+        <property name="tipo" type="string">
+            <column name="tipo" length="45" not-null="true" />
+        </property>
+        <property name="status" type="java.lang.Boolean">
+            <column name="status" />
+        </property>
+        <property name="medio" type="string">
+            <column name="medio" length="45" not-null="true" />
+        </property>
     </class>
 </hibernate-mapping>

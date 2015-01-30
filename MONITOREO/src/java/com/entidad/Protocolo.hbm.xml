@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated 29/01/2015 10:51:11 PM by Hibernate Tools 3.6.0 -->
+<!-- Generated 30/01/2015 10:22:00 AM by Hibernate Tools 3.6.0 -->
 <hibernate-mapping>
-    <class name="com.entidad.Protocolo" table="protocolo" catalog="sisap_v8">
-        <id name="idProtocolo" type="int">
+    <class name="com.entidad.Protocolo" table="protocolo" catalog="sisap">
+        <id name="idProtocolo" type="java.lang.Integer">
             <column name="idPROTOCOLO" />
-            <generator class="assigned" />
+            <generator class="identity" />
         </id>
         <version name="version" type="string">
             <column name="version" length="45" />
@@ -18,18 +18,25 @@
             <column name="descripcion" length="500" not-null="true" />
         </property>
         <property name="objetivo" type="string">
-            <column name="objetivo" length="100" />
+            <column name="objetivo" length="100" not-null="true" />
         </property>
         <property name="leyes" type="string">
             <column name="leyes" length="500" />
         </property>
-        <set name="procedimientos" table="protocolo_has_procedimiento" inverse="false" lazy="true" fetch="select">
+        <property name="status" type="string">
+            <column name="status" length="45" />
+        </property>
+        <set name="actividads" table="actividad" inverse="true" lazy="true" fetch="select">
             <key>
-                <column name="PROTOCOLO_idPROTOCOLO" not-null="true" />
+                <column name="idPROTOCOLO" not-null="true" />
             </key>
-            <many-to-many entity-name="com.entidad.Procedimiento">
-                <column name="PROCEDIMIENTO_idPROCEDIMIENTO" not-null="true" />
-            </many-to-many>
+            <one-to-many class="com.entidad.Actividad" />
+        </set>
+        <set name="claves" table="clave" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idPROTOCOLO" not-null="true" />
+            </key>
+            <one-to-many class="com.entidad.Clave" />
         </set>
     </class>
 </hibernate-mapping>

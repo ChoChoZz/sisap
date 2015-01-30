@@ -1,15 +1,25 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated 29/01/2015 10:51:11 PM by Hibernate Tools 3.6.0 -->
+<!-- Generated 30/01/2015 10:22:00 AM by Hibernate Tools 3.6.0 -->
 <hibernate-mapping>
-    <class name="com.entidad.Recurso" table="recurso" catalog="sisap_v8">
-        <id name="idRecurso" type="int">
-            <column name="idRECURSO" />
-            <generator class="assigned" />
-        </id>
+    <class name="com.entidad.Recurso" table="recurso" catalog="sisap">
+        <composite-id name="id" class="com.entidad.RecursoId">
+            <key-property name="idRecurso" type="string">
+                <column name="idRECURSO" length="25" />
+            </key-property>
+            <key-property name="idPlantel" type="int">
+                <column name="idPLANTEL" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="plantel" class="com.entidad.Plantel" update="false" insert="false" fetch="select">
+            <column name="idPLANTEL" not-null="true" />
+        </many-to-one>
         <property name="nombre" type="string">
             <column name="nombre" length="45" not-null="true" />
+        </property>
+        <property name="status" type="string">
+            <column name="status" length="45" />
         </property>
     </class>
 </hibernate-mapping>

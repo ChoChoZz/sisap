@@ -1,5 +1,5 @@
 package com.entidad;
-// Generated 29/01/2015 10:51:11 PM by Hibernate Tools 3.6.0
+// Generated 30/01/2015 10:21:59 AM by Hibernate Tools 3.6.0
 
 
 
@@ -9,23 +9,40 @@ package com.entidad;
 public class Recurso  implements java.io.Serializable {
 
 
-     private int idRecurso;
+     private RecursoId id;
+     private Plantel plantel;
      private String nombre;
+     private String status;
 
     public Recurso() {
     }
 
-    public Recurso(int idRecurso, String nombre) {
-       this.idRecurso = idRecurso;
+	
+    public Recurso(RecursoId id, Plantel plantel, String nombre) {
+        this.id = id;
+        this.plantel = plantel;
+        this.nombre = nombre;
+    }
+    public Recurso(RecursoId id, Plantel plantel, String nombre, String status) {
+       this.id = id;
+       this.plantel = plantel;
        this.nombre = nombre;
+       this.status = status;
     }
    
-    public int getIdRecurso() {
-        return this.idRecurso;
+    public RecursoId getId() {
+        return this.id;
     }
     
-    public void setIdRecurso(int idRecurso) {
-        this.idRecurso = idRecurso;
+    public void setId(RecursoId id) {
+        this.id = id;
+    }
+    public Plantel getPlantel() {
+        return this.plantel;
+    }
+    
+    public void setPlantel(Plantel plantel) {
+        this.plantel = plantel;
     }
     public String getNombre() {
         return this.nombre;
@@ -33,6 +50,13 @@ public class Recurso  implements java.io.Serializable {
     
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+    public String getStatus() {
+        return this.status;
+    }
+    
+    public void setStatus(String status) {
+        this.status = status;
     }
 
 

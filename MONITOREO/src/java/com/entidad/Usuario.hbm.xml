@@ -1,13 +1,20 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated 29/01/2015 10:51:11 PM by Hibernate Tools 3.6.0 -->
+<!-- Generated 30/01/2015 10:22:00 AM by Hibernate Tools 3.6.0 -->
 <hibernate-mapping>
-    <class name="com.entidad.Usuario" table="usuario" catalog="sisap_v8">
-        <id name="idUsuario" type="int">
-            <column name="idUSUARIO" />
-            <generator class="assigned" />
-        </id>
+    <class name="com.entidad.Usuario" table="usuario" catalog="sisap">
+        <composite-id name="id" class="com.entidad.UsuarioId">
+            <key-property name="idUsuario" type="string">
+                <column name="idUSUARIO" length="20" />
+            </key-property>
+            <key-property name="idPlantel" type="int">
+                <column name="idPLANTEL" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="plantel" class="com.entidad.Plantel" update="false" insert="false" fetch="select">
+            <column name="idPLANTEL" not-null="true" />
+        </many-to-one>
         <property name="nombre" type="string">
             <column name="nombre" length="50" not-null="true" />
         </property>
@@ -26,11 +33,17 @@
         <property name="tipoSangre" type="string">
             <column name="tipo_sangre" length="45" not-null="true" />
         </property>
-        <property name="contrase&#241;a" type="string">
-            <column name="contrase&#241;a" length="45" not-null="true" />
+        <property name="contrasena" type="string">
+            <column name="contrasena" length="45" not-null="true" />
         </property>
-        <property name="status" type="byte">
+        <property name="status" type="boolean">
             <column name="status" not-null="true" />
+        </property>
+        <property name="tipo" type="string">
+            <column name="tipo" length="45" not-null="true" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="60" not-null="true" />
         </property>
         <property name="telefono" type="string">
             <column name="telefono" length="45" not-null="true" />
@@ -38,5 +51,19 @@
         <property name="movil" type="string">
             <column name="movil" length="45" not-null="true" />
         </property>
+        <set name="notificacions" table="notificacion" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idUSUARIO" length="20" not-null="true" />
+                <column name="idPLANTEL" not-null="true" />
+            </key>
+            <one-to-many class="com.entidad.Notificacion" />
+        </set>
+        <set name="denuncias" table="denuncia" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idUSUARIO" length="20" not-null="true" />
+                <column name="idPLANTEL" not-null="true" />
+            </key>
+            <one-to-many class="com.entidad.Denuncia" />
+        </set>
     </class>
 </hibernate-mapping>

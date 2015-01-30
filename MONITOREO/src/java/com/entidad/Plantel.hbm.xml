@@ -1,17 +1,16 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated 29/01/2015 10:51:11 PM by Hibernate Tools 3.6.0 -->
+<!-- Generated 30/01/2015 10:22:00 AM by Hibernate Tools 3.6.0 -->
 <hibernate-mapping>
-    <class name="com.entidad.Plantel" table="plantel" catalog="sisap_v8">
-        <composite-id name="id" class="com.entidad.PlantelId">
-            <key-property name="idPlantel" type="int">
-                <column name="idPLANTEL" />
-            </key-property>
-            <key-property name="direccionIdDireccion" type="int">
-                <column name="DIRECCION_idDIRECCION" />
-            </key-property>
-        </composite-id>
+    <class name="com.entidad.Plantel" table="plantel" catalog="sisap">
+        <id name="idPlantel" type="int">
+            <column name="idPLANTEL" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="area" class="com.entidad.Area" fetch="select">
+            <column name="area_idarea" not-null="true" />
+        </many-to-one>
         <property name="nombre" type="string">
             <column name="nombre" length="100" not-null="true" />
         </property>
@@ -21,5 +20,26 @@
         <property name="extension" type="string">
             <column name="extension" length="45" />
         </property>
+        <property name="direccion" type="string">
+            <column name="direccion" length="16777215" not-null="true" />
+        </property>
+        <property name="coordenadaY" type="binary">
+            <column name="coordenadaY" not-null="true" />
+        </property>
+        <property name="coordenadaX" type="binary">
+            <column name="coordenadaX" not-null="true" />
+        </property>
+        <set name="usuarios" table="usuario" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idPLANTEL" not-null="true" />
+            </key>
+            <one-to-many class="com.entidad.Usuario" />
+        </set>
+        <set name="recursos" table="recurso" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idPLANTEL" not-null="true" />
+            </key>
+            <one-to-many class="com.entidad.Recurso" />
+        </set>
     </class>
 </hibernate-mapping>

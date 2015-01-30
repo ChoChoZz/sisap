@@ -1,23 +1,25 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated 29/01/2015 10:51:11 PM by Hibernate Tools 3.6.0 -->
+<!-- Generated 30/01/2015 10:22:00 AM by Hibernate Tools 3.6.0 -->
 <hibernate-mapping>
-    <class name="com.entidad.Actividad" table="actividad" catalog="sisap_v8">
-        <id name="idActividad" type="int">
-            <column name="idACTIVIDAD" />
-            <generator class="assigned" />
-        </id>
+    <class name="com.entidad.Actividad" table="actividad" catalog="sisap">
+        <composite-id name="id" class="com.entidad.ActividadId">
+            <key-property name="idActividad" type="int">
+                <column name="idACTIVIDAD" />
+            </key-property>
+            <key-property name="idProtocolo" type="int">
+                <column name="idPROTOCOLO" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="protocolo" class="com.entidad.Protocolo" update="false" insert="false" fetch="select">
+            <column name="idPROTOCOLO" not-null="true" />
+        </many-to-one>
         <property name="descripcion" type="string">
             <column name="descripcion" length="45" not-null="true" />
         </property>
-        <set name="procedimientos" table="procedimiento_has_actividad" inverse="false" lazy="true" fetch="select">
-            <key>
-                <column name="ACTIVIDAD_idACTIVIDAD" not-null="true" />
-            </key>
-            <many-to-many entity-name="com.entidad.Procedimiento">
-                <column name="PROCEDIMIENTO_idPROCEDIMIENTO" not-null="true" />
-            </many-to-many>
-        </set>
+        <property name="tipo" type="string">
+            <column name="tipo" length="45" />
+        </property>
     </class>
 </hibernate-mapping>

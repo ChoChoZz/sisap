@@ -1,5 +1,5 @@
 package com.entidad;
-// Generated 29/01/2015 10:51:11 PM by Hibernate Tools 3.6.0
+// Generated 30/01/2015 10:21:59 AM by Hibernate Tools 3.6.0
 
 
 import java.util.Date;
@@ -10,31 +10,75 @@ import java.util.Date;
 public class Denuncia  implements java.io.Serializable {
 
 
-     private int idDenuncia;
+     private DenunciaId id;
+     private Clave clave;
+     private Usuario usuario;
+     private Archivo archivo;
      private Date fechaRegistro;
      private String horaRegistro;
      private Date fechaFin;
      private String ubicacion;
+     private String estado;
      private String descripcion;
+     private Boolean status;
 
     public Denuncia() {
     }
 
-    public Denuncia(int idDenuncia, Date fechaRegistro, String horaRegistro, Date fechaFin, String ubicacion, String descripcion) {
-       this.idDenuncia = idDenuncia;
+	
+    public Denuncia(DenunciaId id, Clave clave, Usuario usuario, Archivo archivo, Date fechaRegistro, String horaRegistro, Date fechaFin, String ubicacion, String estado, String descripcion) {
+        this.id = id;
+        this.clave = clave;
+        this.usuario = usuario;
+        this.archivo = archivo;
+        this.fechaRegistro = fechaRegistro;
+        this.horaRegistro = horaRegistro;
+        this.fechaFin = fechaFin;
+        this.ubicacion = ubicacion;
+        this.estado = estado;
+        this.descripcion = descripcion;
+    }
+    public Denuncia(DenunciaId id, Clave clave, Usuario usuario, Archivo archivo, Date fechaRegistro, String horaRegistro, Date fechaFin, String ubicacion, String estado, String descripcion, Boolean status) {
+       this.id = id;
+       this.clave = clave;
+       this.usuario = usuario;
+       this.archivo = archivo;
        this.fechaRegistro = fechaRegistro;
        this.horaRegistro = horaRegistro;
        this.fechaFin = fechaFin;
        this.ubicacion = ubicacion;
+       this.estado = estado;
        this.descripcion = descripcion;
+       this.status = status;
     }
    
-    public int getIdDenuncia() {
-        return this.idDenuncia;
+    public DenunciaId getId() {
+        return this.id;
     }
     
-    public void setIdDenuncia(int idDenuncia) {
-        this.idDenuncia = idDenuncia;
+    public void setId(DenunciaId id) {
+        this.id = id;
+    }
+    public Clave getClave() {
+        return this.clave;
+    }
+    
+    public void setClave(Clave clave) {
+        this.clave = clave;
+    }
+    public Usuario getUsuario() {
+        return this.usuario;
+    }
+    
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
+    public Archivo getArchivo() {
+        return this.archivo;
+    }
+    
+    public void setArchivo(Archivo archivo) {
+        this.archivo = archivo;
     }
     public Date getFechaRegistro() {
         return this.fechaRegistro;
@@ -64,12 +108,26 @@ public class Denuncia  implements java.io.Serializable {
     public void setUbicacion(String ubicacion) {
         this.ubicacion = ubicacion;
     }
+    public String getEstado() {
+        return this.estado;
+    }
+    
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
     public String getDescripcion() {
         return this.descripcion;
     }
     
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
+    }
+    public Boolean getStatus() {
+        return this.status;
+    }
+    
+    public void setStatus(Boolean status) {
+        this.status = status;
     }
 
 
