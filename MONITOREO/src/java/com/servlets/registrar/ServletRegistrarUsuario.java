@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author jonathanespina
  */
-@WebServlet(name = "ServletUsuario", urlPatterns = {"/ServletUsuario"})
+@WebServlet(name = "ServletRegistrartUsuario", urlPatterns = {"/ServletRegistrarUsuario"})
 public class ServletRegistrarUsuario extends HttpServlet {
 
     /**
@@ -61,7 +61,35 @@ public class ServletRegistrarUsuario extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
-
+        
+        String nombre = request.getParameter("nombre");
+        String pApellido = request.getParameter("pApellido");
+        String sApellido = request.getParameter("sApellido");
+        String tipo = request.getParameter("tipo");
+        String plantel = request.getParameter("plantel");
+        String identificador = request.getParameter("identificador");
+        String correo = request.getParameter("correo");
+        String contrasenia1 = request.getParameter("contrasenia1");
+        String contrasenia2 = request.getParameter("contrasenia2");
+        String sexo = request.getParameter("sexo");
+        int edad = Integer.parseInt(request.getParameter("edad"));
+        String telefono = request.getParameter("telefono");
+        String movil = request.getParameter("movil");
+        String sangre = request.getParameter("sangre");
+        
+//        if (sangre.compareTo("O-")==0){
+//            sangre = "O-";
+//        }
+//        else{
+//            sangre ="o+";
+//        }
+        
+        int status = 1;
+        
+        
+        System.out.println(" "+nombre+" "+pApellido+" "+sApellido+" "+tipo+" "+plantel+" "+identificador+" "+correo+" "+contrasenia1+" "
+                + " "+contrasenia2+" "+sexo+" "+edad+" "+telefono+" "+movil+" "+sangre);
+        
     }
 
     /**
