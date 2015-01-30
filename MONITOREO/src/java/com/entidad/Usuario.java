@@ -16,7 +16,7 @@ public class Usuario  implements java.io.Serializable {
      private int edad;
      private String sexo;
      private String tipoSangre;
-     private String contrase�a;
+     private String contrasenia;
      private byte status;
      private String telefono;
      private String movil;
@@ -24,7 +24,7 @@ public class Usuario  implements java.io.Serializable {
     public Usuario() {
     }
 
-    public Usuario(int idUsuario, String nombre, String apPaterno, String apMaterno, int edad, String sexo, String tipoSangre, String contrase�a, byte status, String telefono, String movil) {
+    public Usuario(int idUsuario, String nombre, String apPaterno, String apMaterno, int edad, String sexo, String tipoSangre, String contrasenia, byte status, String telefono, String movil) {
        this.idUsuario = idUsuario;
        this.nombre = nombre;
        this.apPaterno = apPaterno;
@@ -32,7 +32,7 @@ public class Usuario  implements java.io.Serializable {
        this.edad = edad;
        this.sexo = sexo;
        this.tipoSangre = tipoSangre;
-       this.contrase�a = contrasena;
+       this.contrasenia = contrasenia;
        this.status = status;
        this.telefono = telefono;
        this.movil = movil;
@@ -87,12 +87,12 @@ public class Usuario  implements java.io.Serializable {
     public void setTipoSangre(String tipoSangre) {
         this.tipoSangre = tipoSangre;
     }
-    public String getContrase�a() {
-        return this.contrase�a;
+    public String getContrasenia() {
+        return this.contrasenia;
     }
     
-    public void setContrase�a(String contrase�a) {
-        this.contrase�a = contrase�a;
+    public void setContrasenia(String contrasenia) {
+        this.contrasenia = contrasenia;
     }
     public byte getStatus() {
         return this.status;
@@ -115,10 +115,4 @@ public class Usuario  implements java.io.Serializable {
     public void setMovil(String movil) {
         this.movil = movil;
     }
-
-
-
-
 }
-
-
