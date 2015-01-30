@@ -205,7 +205,7 @@
 			
 		<div class="panel panel-info">
 	      <div class="panel-heading">
-	        <h3 class="panel-title text-center">Instituto Politecnico Nacional</h3>
+	        <h3 class="panel-title text-center">Instituto Polit&eacute;cnico Nacional</h3>
 	      </div>
 	      <div class="panel-body text-center">
 	        Divisi&oacute;n de seguridad.
@@ -232,7 +232,7 @@
 						</div>
 						<div class="form-group">
 						    <label for="descripcion" class="col-lg-3 control-label">Descripci&oacute;n:</label>
-						    <h6 id="descripcion" class="col-lg-9 text-left">El sendero seguro se creo para la ruta de la escuela al mero Politecnico, se encuentra ilumniado y con camaras de vigilancia</h6>
+						    <h6 id="descripcion" class="col-lg-9 text-left">El sendero seguro se creo para la ruta de la escuela al mero Polit&eacute;cnico, se encuentra ilumniado y con camaras de vigilancia</h6>
 						</div>
 		      		</form>
 		      	</div>

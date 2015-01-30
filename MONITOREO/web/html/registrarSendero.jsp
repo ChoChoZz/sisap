@@ -116,7 +116,7 @@
 				    <label for="institucion" class="col-lg-2 control-label">Plantel:</label>
 				    <div class="col-lg-10">
 				      <select name="" id="" class="form-control">
-				      		<option>ESCOM</option>
+				      	<option>ESCOM</option>
 				      	<option>ESIA</option>
 				      	<option>ESIA Tecamachalco</option>
 						<option>ESIME TICOMAN</option>
@@ -171,7 +171,7 @@
 			
 		<div class="panel panel-info">
 	      <div class="panel-heading">
-	        <h3 class="panel-title text-center">Instituto Politecnico Nacional</h3>
+	        <h3 class="panel-title text-center">Instituto Polit&eacute;cnico Nacional</h3>
 	      </div>
 	      <div class="panel-body text-center">
 	        Divisi&oacute;n de seguridad.

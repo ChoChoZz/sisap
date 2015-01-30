@@ -1,19 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/bootstrap.css">
-    <link rel="stylesheet" href="../css/bootstrap.css.map">
-    <link rel="stylesheet" href="../css/monitor.css">
-    <link rel="stylesheet" href="../css/jquery-ui.min.css">
-    <script src="../js/jquery.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/jquery-ui.min.js"></script>
-    <script src="../js/bootbox.min.js"></script>
-    
-    <title>SISAP - protocoloegistrar cuestionario</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="../css/bootstrap.min.css">
+		<link rel="stylesheet" href="../css/bootstrap.css">
+		<link rel="stylesheet" href="../css/bootstrap.css.map">
+                <link rel="stylesheet" href="../css/monitor.css">
+		<script src="../js/jquery.js"></script>
+  		<script src="../js/bootstrap.min.js"></script>
+	<title>SISAP - Registrar protocolo</title>
 </head>
 <body>
 	<div class="container">
@@ -116,80 +112,61 @@
 				<div class="col-xs-8">
 					<form class="form-horizontal" role="form">
 						<div class="form-group">
-							<label for="Nombre" class="col-lg-3 control-label">Persona agraviada:</label>
+							<label for="nombre" class="col-lg-3 control-label">Nombre:</label>
 							<div class="col-lg-9">
-								<input type="text" class="form-control" id="Nombre" placeholder="Nombre completo del afectado" required>
+								<input type="text" class="form-control" id="nombre" placeholder="Nombre del protocolo" required>
 							</div>
 						</div>
 
 						<div class="form-group">
-						    <label for="institucion" class="col-lg-3 control-label">¿Que sucedio?</label>
+						    <label for="institucion" class="col-lg-3 control-label">Tipo</label>
 							    <div class="col-lg-9">
 							      <select name="" id="" class="form-control">
-							      		<option>Incidente 1</option>
-							      		<option>Incidente 2</option>
-							      		<option>Incidente 3</option>
-									<option>Incidente 4</option>
-									<option>Incidente 5</option>
+							      		<option>Seguridad</option>
+							      		<option>Emergencia Medica</option>
 							      </select>
 							    </div>
 					  	</div>
 
-					  	 <div class="form-group">
-				        <label for="fecha" class="control-label col-lg-3">¿Cuando sucedio?</label>
-				        <div class="controls col-lg-9">
-				            <div class="input-group">
-				                <input id="fecha" type="text" class="date-picker form-control" required/>
-				                <label for="fecha" class="input-group-addon btn"><span class="glyphicon glyphicon-calendar"></span>
-				                </label>
-				            </div>
-				        </div>
-				   	  </div>
-
-				   	  <div class="form-group">
-							<label for="Como" class="col-lg-3 control-label">¿C&oacute;mo sucedio?</label>
+					  	<div class="form-group">
+							<label for="descripcion" class="col-lg-3 control-label">Descripci&oacute;n:</label>
 							<div class="col-lg-9">
-								<input type="text" class="form-control" id="Como" placeholder="Describe brevemente la situaci&oacute;n" required>
+								<textarea type="text" class="form-control" id="descripcion" placeholder="Descripcion del protocolo" required> </textarea>
 							</div>
 						</div>
 
 						<div class="form-group">
-							<label for="donde" class="col-lg-3 control-label">¿Donde sucedio?</label>
+							<label for="version" class="col-lg-3 control-label">Objetivo:</label>
 							<div class="col-lg-9">
-						      <select name="" id="" class="form-control">
-						      		<option>Plantel 1</option>
-						      		<option>Plantel 2</option>
-						      		<option>Plantel 3</option>
-									<option>Plantel 4</option>
-									<option>Plantel 5</option>
-						      </select>
-						    </div>
-						</div>
-
-						 <div class="form-group">
-							<label for="quien" class="col-lg-3 control-label">¿Conoce al ofensor?</label>
-							<div class="col-lg-9">
-						      <select name="" id="" class="form-control">
-						      		<option>SI</option>
-						      		<option>NO</option>
-						      </select>
-						      <input type="text" class="form-control" id="quien" placeholder="Nombre completo del ofensor" disabled>
-						    </div>
-						</div>
-
-						<div class="form-group">
-							<label for="porque" class="col-lg-3 control-label">¿Por qu&eacute; sucedio?</label>
-							<div class="col-lg-9">
-								<input type="text" class="form-control" id="porque" placeholder="Describa la cuasa del incidente delictivo" >
+								<input type="text" class="form-control" id="version" placeholder="Objetivo" required>
 							</div>
 						</div>
 
 						<div class="form-group">
-							<label for="paraque" class="col-lg-3 control-label">¿Para qu&eacute;?</label>
+							<label for="version" class="col-lg-3 control-label">Versi&oacute;n:</label>
 							<div class="col-lg-9">
-								<input type="text" class="form-control" id="paraque" placeholder="Describe brevemente el motivo o fin del incicente" >
+								<input type="text" class="form-control" id="version" placeholder="1.0" required>
 							</div>
 						</div>
+
+						<div class="form-group">
+						    <label for="institucion" class="col-lg-3 control-label">Aprobado:</label>
+							    <div class="col-lg-9">
+							      <select name="" id="" class="form-control">
+							      		<option value="true">Si</option>
+							      		<option value="false">No</option>
+							      </select>
+							    </div>
+					  	</div>
+
+					  	<div class="form-group">
+							<label for="leyes" class="col-lg-3 control-label">Leyes aplicadas:</label>
+							<div class="col-lg-9">
+								<input type="text" class="form-control" id="leyes" placeholder="Art. 4, Frac. II, Art. 6 Frac. IV">
+							</div>
+						</div>
+
+
 
 				   	  <script type="text/javascript">
 			            $(function () {
@@ -208,7 +185,7 @@
 					      <a class="btn btn-danger confirm" href="#" onclick="bootbox.confirm();">Cancelar</a>
 					    </div>
 					    <div class="col-lg-offset-4 col-lg-1">
-					      <button type="submit" class="btn btn-success">Aceptar</button>
+					      <a role="button" data-toggle="modal" class="btn btn-success" href="#numberAct">Aceptar</a>
 					    </div>
 					  </div>
 					</form>
@@ -229,6 +206,113 @@
 	      </div>
 	    </div>
 
+	    <!--Ventana modal para infromacion de la alerta-->
+		<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="numberAct">
+		  <div class="modal-dialog modal-lg">
+		    <div class="modal-content" id="description">
+		      <div class="row" id="">
+		      	<div class="col-xs-3"></div>
+		      	<div class="col-xs-6">
+		      		<br>
+		      		<br>
+		      		<h5 id="instrucciones" class="text-center"><strong>Registro de actividades</strong></h5>
+		      		<br>
+		      		<form class="form-horizontal" role="form" action="">
+		      			<div class="form-group">
+						    <div class="form-group">
+							    <label for="nameAct" class="col-lg-3 control-label">Nombre:</label>
+							    <div class="col-lg-9">
+							      <input type="text" min="1" name="nameAct" class="form-control" id="nameAct" required title="Ingresa el nombre de la actividad o">
+							    </div>
+							  </div>
+							<div class="form-group">
+							    <label for="descAct" class="col-lg-3 control-label">Descripci&oacute;n:</label>
+							    <div class="col-lg-9">
+							      <input type="text" min="1" name="descAct" class="form-control" id="descAct" required title="Ingresa el nombre de la actividad o">
+							    </div>
+							</div>  
+							<div class="form-group">
+							    <label for="prioridadAct" class="col-lg-3 control-label">Prioridad:</label>
+							    <div class="col-lg-9">
+									<select name="" id="" class="form-control">
+								      		<option value="Alta">Alta</option>
+									      	<option value="Media">Media</option>
+									      	<option value="Baja">Baja</option>
+								      </select>
+							    </div>
+							</div>  
+							<div class="form-group">
+							    <label for="prioridadAct" class="col-lg-3 control-label">Tipo:</label>
+							    <div class="col-lg-9">
+									<select name="" id="" class="form-control">
+								      		<option value="envioMedico">Env&iacute;o de doctor</option>
+								      		<option value="envioPolicia">Env&iacute;o de polic&iacute;a</option>
+								      		<option value="envioPatrulla">Env&iacute;o de patrula</option>
+									      	<option value="envioAmbulacia">Env&iacute;o de ambulacia</option>
+								      </select>
+							    </div>
+							</div>
+
+							<br>
+							<br>
+							<br>
+			
+							<div class="form-group" id="botones">
+							    <div class=" col-lg-1">
+							      <a class="btn btn-danger confirm" href="#" onclick="bootbox.confirm();">Cancelar</a>
+							    </div>
+							    <div class="col-lg-offset-4 col-lg-1">
+							      <a role="button" data-toggle="modal" class="btn btn-info" href="#numberAct">Agregar recurso</a>
+							    </div>
+							    <div class="col-lg-offset-5 col-lg-1">
+							      <a role="button" data-toggle="modal" class="btn btn-success" href="#numberAct">Finalizar</a>
+							    </div>
+							</div>  
+						</div>
+		      		</form>
+		      	</div>
+		      	<div class="col-xs-3"></div>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
         </div>
+
+        <!--Script para cancelar-->
+	    <script>
+	        $("a.confirm").click(function(e) {
+			    e.preventDefault();
+			    bootbox.confirm("Â¿Desea cancelar la operaci&oacute;n?", function(confirmed) {
+			        console.log("El resultado fue: "+confirmed);
+			        if(confirmed==false){
+
+			        }
+			        else{
+			        	window.location.replace("./home.jsp");
+			        }
+			    });
+			});
+	    </script>
+
+	    <!--Script para eliminar-->
+          <script>
+	        $("button.eliminar").click(function(e) {
+			    e.preventDefault();
+			    bootbox.confirm("Â¿ Desea eliminar el registro?", function(confirmed) {
+			        console.log("El resultado fue: "+confirmed);
+			        if(confirmed==false){
+
+			        }
+			        else{
+			        	bootbox.alert("Se ha eliminado la alerta con &eacute;xito", function(e) {
+						  console.log("El resultado fue true");
+						  //C&oacute;digo para eliminar al usuario
+
+						});
+			        }
+			    });
+			});
+	    </script>
 </body>
 </html>

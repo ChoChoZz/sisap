@@ -107,13 +107,42 @@
 		<!-- Cuerpo  -->
 		<div id="cuerpo">
 		<h3 class="text-center">Buscar protocolo</h3>
-			
+			<div class="row">
+				<div class="col-xs-1"></div>
+				<div class="col-xs-10">
+					<form class="form-horizontal" role="form" target="./gestionProtocolo.jsp">
+						<div class="form-group">
+							<label for="nombre" class="col-lg-3 control-label">Nombre:</label>
+							<div class="col-lg-9">
+								<input type="text" class="form-control" id="nombre" placeholder="Nombre del protocolo" required>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="descripcion" class="col-lg-3 control-label">Descripci&oacute;n:</label>
+							<div class="col-lg-9">
+								<textarea class="form-control" rows="3" required></textarea>
+							</div>
+						</div>
+
+						<div class="form-group" id="botones">
+						    <div class="col-lg-offset-2 col-lg-1">
+						      <a class="btn btn-danger confirm" href="#" onclick="bootbox.confirm();">Cancelar</a>
+						    </div>
+						    <div class="col-lg-offset-6 col-lg-1">
+						      <a type="submit" class="btn btn-success" href="./gestionProtocolo.jsp">Aceptar</a>
+						    </div>
+						</div>
+					</form>
+				</div>
+				<div class="col-xs-1"></div>
+			</div>
 		</div>
 		<!-- Pie de pagina -->
 			
 		<div class="panel panel-info">
 	      <div class="panel-heading">
-	        <h3 class="panel-title text-center">Instituto Politecnico Nacional</h3>
+	        <h3 class="panel-title text-center">Instituto Polit&eacute;cnico Nacional</h3>
 	      </div>
 	      <div class="panel-body text-center">
 	        Divisi&oacute;n de seguridad.

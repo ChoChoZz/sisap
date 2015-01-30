@@ -182,7 +182,7 @@
 
 					  <div class="form-group">
 					    <div class="col-lg-offset-2 col-lg-10">
-					      <button type="submit" class="btn btn-info">Buscar</button>
+					      <a type="submit" class="btn btn-info" href="./gestionDenuncia.jsp">Buscar</a>
 					    </div>
 					  </div>
 					</form>
@@ -194,7 +194,7 @@
 			
 		<div class="panel panel-info">
 	      <div class="panel-heading">
-	        <h3 class="panel-title text-center">Instituto Politecnico Nacional</h3>
+	        <h3 class="panel-title text-center">Instituto Polit&eacute;cnico Nacional</h3>
 	      </div>
 	      <div class="panel-body text-center">
 	        Divisi&oacute;n de seguridad.
