@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="../css/bootstrap.min.css">
-		<link rel="stylesheet" href="../css/bootstrap.css">
-		<link rel="stylesheet" href="../css/bootstrap.css.map">
-                <link rel="stylesheet" href="../css/monitor.css">
-		<script src="../js/jquery.js"></script>
-  		<script src="../js/bootstrap.min.js"></script>
-	<title>SISAP - protocoloegistrar cuestionario</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap.css.map">
+    <link rel="stylesheet" href="../css/monitor.css">
+    <link rel="stylesheet" href="../css/jquery-ui.min.css">
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+    <script src="../js/bootbox.min.js"></script>
+    
+    <title>SISAP - protocoloegistrar cuestionario</title>
 </head>
 <body>
 	<div class="container">
@@ -119,20 +123,20 @@
 						</div>
 
 						<div class="form-group">
-						    <label for="institucion" class="col-lg-3 control-label">Â¿Que sucedio?</label>
+						    <label for="institucion" class="col-lg-3 control-label">¿Que sucedio?</label>
 							    <div class="col-lg-9">
 							      <select name="" id="" class="form-control">
 							      		<option>Incidente 1</option>
 							      		<option>Incidente 2</option>
 							      		<option>Incidente 3</option>
-										<option>Incidente 4</option>
-										<option>Incidente 5</option>
+									<option>Incidente 4</option>
+									<option>Incidente 5</option>
 							      </select>
 							    </div>
 					  	</div>
 
 					  	 <div class="form-group">
-				        <label for="fecha" class="control-label col-lg-3">Â¿Cuando sucedio?</label>
+				        <label for="fecha" class="control-label col-lg-3">¿Cuando sucedio?</label>
 				        <div class="controls col-lg-9">
 				            <div class="input-group">
 				                <input id="fecha" type="text" class="date-picker form-control" required/>
@@ -143,14 +147,14 @@
 				   	  </div>
 
 				   	  <div class="form-group">
-							<label for="Como" class="col-lg-3 control-label">Â¿C&oacute;mo sucedio?</label>
+							<label for="Como" class="col-lg-3 control-label">¿C&oacute;mo sucedio?</label>
 							<div class="col-lg-9">
 								<input type="text" class="form-control" id="Como" placeholder="Describe brevemente la situaci&oacute;n" required>
 							</div>
 						</div>
 
 						<div class="form-group">
-							<label for="donde" class="col-lg-3 control-label">Â¿Donde sucedio?</label>
+							<label for="donde" class="col-lg-3 control-label">¿Donde sucedio?</label>
 							<div class="col-lg-9">
 						      <select name="" id="" class="form-control">
 						      		<option>Plantel 1</option>
@@ -163,7 +167,7 @@
 						</div>
 
 						 <div class="form-group">
-							<label for="quien" class="col-lg-3 control-label">Â¿Conoce al ofensor?</label>
+							<label for="quien" class="col-lg-3 control-label">¿Conoce al ofensor?</label>
 							<div class="col-lg-9">
 						      <select name="" id="" class="form-control">
 						      		<option>SI</option>
@@ -174,14 +178,14 @@
 						</div>
 
 						<div class="form-group">
-							<label for="porque" class="col-lg-3 control-label">Â¿Por qu&eacute; sucedio?</label>
+							<label for="porque" class="col-lg-3 control-label">¿Por qu&eacute; sucedio?</label>
 							<div class="col-lg-9">
 								<input type="text" class="form-control" id="porque" placeholder="Describa la cuasa del incidente delictivo" >
 							</div>
 						</div>
 
 						<div class="form-group">
-							<label for="paraque" class="col-lg-3 control-label">Â¿Para qu&eacute;?</label>
+							<label for="paraque" class="col-lg-3 control-label">¿Para qu&eacute;?</label>
 							<div class="col-lg-9">
 								<input type="text" class="form-control" id="paraque" placeholder="Describe brevemente el motivo o fin del incicente" >
 							</div>
@@ -218,7 +222,7 @@
 			
 		<div class="panel panel-info">
 	      <div class="panel-heading">
-	        <h3 class="panel-title text-center">Instituto Politecnico Nacional</h3>
+	        <h3 class="panel-title text-center">Instituto Polit&eacute;cnico Nacional</h3>
 	      </div>
 	      <div class="panel-body text-center">
 	        Divisi&oacute;n de seguridad.
