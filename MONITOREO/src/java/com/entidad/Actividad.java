@@ -12,7 +12,7 @@ public class Actividad  implements java.io.Serializable {
 
 
      private int idActividad;
-     private String descripcion;
+     private String descripcion;//aqui puse el comentario
      private Set procedimientos = new HashSet(0);
 
     public Actividad() {
