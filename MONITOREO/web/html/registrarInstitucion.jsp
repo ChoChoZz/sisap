@@ -137,17 +137,7 @@
 					<div class="form-group">
 					    <label for="boleta" class="col-lg-2 control-label">Direcci&oacute;n:</label>
 					    <div class="col-lg-10">
-                                                <input type="text" class="form-control" name="calle" placeholder="Calle" required>
-                                                <br>
-                                                <input type="text" class="form-control" name="colonia" placeholder="Colonia" required>
-                                                <br>
-                                                <input type="text" class="form-control" name="cp" placeholder="C.P." required>
-                                                <br>
-                                                <input type="text" class="form-control" name="ciudad" placeholder="Ciudad" required>
-                                                <br>
-                                                <input type="text" class="form-control" name="estado" placeholder="Estado" required>
-                                                <br>
-                                                <input type="text" class="form-control" name="numero" placeholder="N&uacute;mero" required>
+                                                <input type="text" class="form-control" name="direccion" placeholder="Calle" required>
 					    </div>
 					</div>
 
@@ -157,7 +147,7 @@
 					      <input type="text" class="form-control" id="coordenada0" placeholder="Latitud" required name="coordenada0">
 					    </div>
 					    <div class="col-lg-5">
-					      <input type="text" class="form-control" id="coordenada1" placeholder="Longitud" required name="coordenada1">
+					      <input type="text" class="form-control" id="coordenada1" placeholder="Altitud" required name="coordenada1">
 					    </div>
 					</div>
 

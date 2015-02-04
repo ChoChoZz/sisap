@@ -65,15 +65,12 @@ public class ServletRegistrarPlantel extends HttpServlet {
         String nombre = request.getParameter("identificador");
         String tipo = request.getParameter("tipo");
         String telefono = request.getParameter("telefono");
-        String extension = request.getParameter("extension");
-     //direccion   
-        String calle = request.getParameter("calle");
-        String colonia = request.getParameter("colonia");
-        String cp = request.getParameter("cp");
-        String ciudad = request.getParameter("ciudad");
-        String estado = request.getParameter("estado");
-        String numero = request.getParameter("numero");
+        String extension = request.getParameter("extension");  
+        String direccion = request.getParameter("direccion");
+        String latitud = request.getParameter("coordenada0");
+        String altitud = request.getParameter("coordenada1");
      
+        System.out.println(nombre+" "+direccion+ " "+tipo+" "+telefono+" "+extension+" "+latitud+" "+altitud);
         
         
     }
