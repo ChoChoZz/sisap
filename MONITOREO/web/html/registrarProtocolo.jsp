@@ -110,7 +110,7 @@
 			<div class="row">
 				<div class="col-xs-2"></div>
 				<div class="col-xs-8">
-					<form class="form-horizontal" role="form">
+                                    <form class="form-horizontal" role="form" action="../ServletRegistrarProtocolo" method="post">
 						<div class="form-group">
 							<label for="nombre" class="col-lg-3 control-label">Nombre:</label>
 							<div class="col-lg-9">
@@ -121,9 +121,9 @@
 						<div class="form-group">
 						    <label for="institucion" class="col-lg-3 control-label">Tipo</label>
 							    <div class="col-lg-9">
-							      <select name="" id="" class="form-control">
-							      		<option>Seguridad</option>
-							      		<option>Emergencia Medica</option>
+							      <select name="proto" id="proto" class="form-control">
+                                                                  <option value="Seguridad">Seguridad</option>
+                                                                  <option value="Emergencia Medica">Emergencia Medica</option>
 							      </select>
 							    </div>
 					  	</div>
@@ -131,28 +131,28 @@
 					  	<div class="form-group">
 							<label for="descripcion" class="col-lg-3 control-label">Descripci&oacute;n:</label>
 							<div class="col-lg-9">
-								<textarea type="text" class="form-control" id="descripcion" placeholder="Descripcion del protocolo" required> </textarea>
+                                                            <textarea type="text" class="form-control" name="descripcion" id="descripcion" placeholder="Descripcion del protocolo" required> </textarea>
 							</div>
 						</div>
 
 						<div class="form-group">
 							<label for="version" class="col-lg-3 control-label">Objetivo:</label>
 							<div class="col-lg-9">
-								<input type="text" class="form-control" id="version" placeholder="Objetivo" required>
+                                                            <input type="text" class="form-control" id="objetivo" name="objetivo" placeholder="Objetivo" required>
 							</div>
 						</div>
 
 						<div class="form-group">
 							<label for="version" class="col-lg-3 control-label">Versi&oacute;n:</label>
 							<div class="col-lg-9">
-								<input type="text" class="form-control" id="version" placeholder="1.0" required>
+                                                            <input type="text" class="form-control" id="version" name="version" placeholder="1.0" required>
 							</div>
 						</div>
 
 						<div class="form-group">
 						    <label for="institucion" class="col-lg-3 control-label">Aprobado:</label>
 							    <div class="col-lg-9">
-							      <select name="" id="" class="form-control">
+							      <select name="aprobado" id="aprobado" class="form-control">
 							      		<option value="true">Si</option>
 							      		<option value="false">No</option>
 							      </select>
@@ -162,7 +162,7 @@
 					  	<div class="form-group">
 							<label for="leyes" class="col-lg-3 control-label">Leyes aplicadas:</label>
 							<div class="col-lg-9">
-								<input type="text" class="form-control" id="leyes" placeholder="Art. 4, Frac. II, Art. 6 Frac. IV">
+                                                            <input type="text" class="form-control" name="leyes" id="leyes" placeholder="Art. 4, Frac. II, Art. 6 Frac. IV">
 							</div>
 						</div>
 
