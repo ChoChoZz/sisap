@@ -94,7 +94,7 @@ public class ServletSave extends HttpServlet {
         PlantelDB plantelDB = new PlantelDB();
         
         int i = 0;
-        i = plantelDB.savePlantel(plantel);
+     //s   i = plantelDB.savePlantel(plantel);
         if (i != 0) {
             System.out.println("chidoooo");
         }
