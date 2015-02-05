@@ -116,35 +116,35 @@
 			<div class="row">
 				<div class="col-xs-2"></div>
 				<div class="col-xs-8">
-					<form class="form-horizontal" role="form">
+                                    <form class="form-horizontal" role="form" action="../ServletRegistrarDenuncia" method="post">
 						<div class="form-group">
 							<label for="Nombre" class="col-lg-3 control-label">Persona agraviada:</label>
 							<div class="col-lg-9">
-								<input type="text" class="form-control" id="Nombre" placeholder="Nombre completo del afectado" required>
+                                                            <input type="text" class="form-control" id="denunciante" name="denunciante" placeholder="Identificador del denunciante" required>
 							</div>
 						</div>
 
 						<div class="form-group">
-						    <label for="institucion" class="col-lg-3 control-label">Â¿Que sucedio?</label>
+						    <label for="institucion" class="col-lg-3 control-label">¿Qué sucedio?</label>
 							    <div class="col-lg-9">
-							      <select name="" id="" class="form-control">
+							      <select name="que" id="que" class="form-control">
 							      		<option value="1">Robo, Atraco, Asalto</option>
 							      		<option value="2">Vandalismo, Da&ntilde;o</option>
 							      		<option value="3">Agresi&oacute;n</option>
-										<option value="4">Agresi&oacute;n sexual</option>
-										<option value="5">Acoso Escolar</option>
-										<option value="6">Pelea entre grupos</option>
-										<option value="7">Perdido, Desaparecido</option>
-										<option value="8">Alerta de prueba</option>
+									<option value="4">Agresi&oacute;n sexual</option>
+									<option value="5">Acoso Escolar</option>
+									<option value="6">Pelea entre grupos</option>
+									<option value="7">Perdido, Desaparecido</option>
+									<option value="8">Alerta de prueba</option>
 							      </select>
 							    </div>
 					  	</div>
 
 					  	 <div class="form-group">
-				        <label for="fecha" class="control-label col-lg-3">Â¿Cuando sucedio?</label>
+				        <label for="fecha" class="control-label col-lg-3">¿Cuando sucedio?</label>
 				        <div class="controls col-lg-9">
 				            <div class="input-group">
-				                <input id="fecha" type="text" class="date-picker form-control" required/>
+                                                <input id="cuando" name="cuando" type="text" class="date-picker form-control" required/>
 				                <label for="fecha" class="input-group-addon btn"><span class="glyphicon glyphicon-calendar"></span>
 				                </label>
 				            </div>
@@ -152,33 +152,44 @@
 				   	  </div>
 
 				   	  <div class="form-group">
-							<label for="Como" class="col-lg-3 control-label">Â¿C&oacute;mo sucedio?</label>
+							<label for="Como" class="col-lg-3 control-label">¿C&oacute;mo sucedio?</label>
 							<div class="col-lg-9">
-								<input type="text" class="form-control" id="Como" placeholder="Describe brevemente la situaci&oacute;n" required>
+								<input type="text" class="form-control" id="como" name="como" placeholder="Describe brevemente la situaci&oacute;n" required>
 							</div>
 						</div>
 
 						<div class="form-group">
-							<label for="donde" class="col-lg-3 control-label">Â¿Donde sucedio?</label>
+							<label for="donde" class="col-lg-3 control-label">¿Donde sucedio?</label>
 							<div class="col-lg-9">
-						      <select name="" id="" class="form-control">
-						      		<option>Plantel 1</option>
-						      		<option>Plantel 2</option>
-						      		<option>Plantel 3</option>
-									<option>Plantel 4</option>
-									<option>Plantel 5</option>
+						      <select name="plantel" id="plantel" class="form-control">
+                                                                <option value="1">Plantel 1</option>
+						      		<option value="2">Plantel 2</option>
+                                                                <option value="3">Plantel 3</option>
+                                                                <option value="4">Plantel 4</option>
+                                                                <option value="5">Plantel 5</option>
 						      </select>
 						    </div>
 						</div>
 
 						 <div class="form-group">
-							<label for="quien" class="col-lg-3 control-label">Â¿Conoce al ofensor?</label>
+							<label for="quien" class="col-lg-3 control-label">¿Conoce al ofensor?</label>
 							<div class="col-lg-9">
-						      <select name="" id="" class="form-control">
-						      		<option>SI</option>
-						      		<option>NO</option>
+						      <select name="conoce" id="" class="form-control">
+                                                                <option value="0">SI</option>
+                                                                <option value="1">NO</option>
 						      </select>
 						      <input type="text" class="form-control" id="quien" placeholder="Nombre completo del ofensor" disabled>
+						    </div>
+						</div>
+                                        
+                                                <div class="form-group">
+							<label for="donde" class="col-lg-3 control-label">Estado</label>
+							<div class="col-lg-9">
+						      <select name="estado" id="estado" class="form-control">
+                                                                <option value="Pendiente">Pendiente</option>
+						      		<option value="En curso">En curso</option>
+                                                                <option value="Resuelto">Resuelto</option>
+						      </select>
 						    </div>
 						</div>
 
