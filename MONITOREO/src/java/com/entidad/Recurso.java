@@ -1,5 +1,5 @@
-package com.entity;
-// Generated 05-feb-2015 11:03:35 by Hibernate Tools 4.3.1
+package com.entidad;
+// Generated 05-feb-2015 11:16:34 by Hibernate Tools 4.3.1
 
 
 import javax.persistence.AttributeOverride;

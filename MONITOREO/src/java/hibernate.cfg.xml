@@ -7,24 +7,24 @@
     <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/sisap?zeroDateTimeBehavior=convertToNull</property>
     <property name="hibernate.connection.username">root</property>
     <property name="hibernate.connection.password">root</property>
-    <mapping class="com.entity.ClaveId"/>
-    <mapping class="com.entity.Usuario"/>
-    <mapping class="com.entity.Tipo"/>
-    <mapping class="com.entity.NotificacionId"/>
-    <mapping class="com.entity.PlantelId"/>
-    <mapping class="com.entity.RecursoId"/>
-    <mapping class="com.entity.Clave"/>
-    <mapping class="com.entity.Protocolo"/>
-    <mapping class="com.entity.UsuarioId"/>
-    <mapping class="com.entity.Notificacion"/>
-    <mapping class="com.entity.Denuncia"/>
-    <mapping class="com.entity.Recurso"/>
-    <mapping class="com.entity.Plantel"/>
-    <mapping class="com.entity.Prioridad"/>
-    <mapping class="com.entity.Actividad"/>
-    <mapping class="com.entity.DenunciaId"/>
-    <mapping class="com.entity.Area"/>
-    <mapping class="com.entity.ActividadId"/>
-    <mapping class="com.entity.Archivo"/>
+    <mapping class="com.entidad.Clave"/>
+    <mapping class="com.entidad.Tipo"/>
+    <mapping class="com.entidad.Usuario"/>
+    <mapping class="com.entidad.Actividad"/>
+    <mapping class="com.entidad.ClaveId"/>
+    <mapping class="com.entidad.ActividadId"/>
+    <mapping class="com.entidad.Area"/>
+    <mapping class="com.entidad.PlantelId"/>
+    <mapping class="com.entidad.RecursoId"/>
+    <mapping class="com.entidad.Protocolo"/>
+    <mapping class="com.entidad.Plantel"/>
+    <mapping class="com.entidad.Recurso"/>
+    <mapping class="com.entidad.Archivo"/>
+    <mapping class="com.entidad.Notificacion"/>
+    <mapping class="com.entidad.Prioridad"/>
+    <mapping class="com.entidad.DenunciaId"/>
+    <mapping class="com.entidad.UsuarioId"/>
+    <mapping class="com.entidad.NotificacionId"/>
+    <mapping class="com.entidad.Denuncia"/>
   </session-factory>
 </hibernate-configuration>

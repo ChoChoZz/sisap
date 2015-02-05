@@ -2,16 +2,16 @@
 <!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
 <hibernate-reverse-engineering>
   <schema-selection match-catalog="sisap"/>
-  <table-filter match-name="usuario"/>
-  <table-filter match-name="protocolo"/>
   <table-filter match-name="area"/>
-  <table-filter match-name="recurso"/>
-  <table-filter match-name="prioridad"/>
-  <table-filter match-name="archivo"/>
+  <table-filter match-name="denuncia"/>
+  <table-filter match-name="clave"/>
   <table-filter match-name="notificacion"/>
+  <table-filter match-name="protocolo"/>
   <table-filter match-name="tipo"/>
   <table-filter match-name="plantel"/>
-  <table-filter match-name="clave"/>
-  <table-filter match-name="denuncia"/>
+  <table-filter match-name="prioridad"/>
   <table-filter match-name="actividad"/>
+  <table-filter match-name="recurso"/>
+  <table-filter match-name="usuario"/>
+  <table-filter match-name="archivo"/>
 </hibernate-reverse-engineering>
