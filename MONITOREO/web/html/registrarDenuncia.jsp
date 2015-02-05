@@ -29,7 +29,7 @@
 		  <div class="navbar-header">
 		    <button type="button" class="navbar-toggle" data-toggle="collapse"
 		            data-target=".navbar-ex1-collapse">
-		      <span class="glyphicon glyphicon-tasks"></span>
+                        <span class="glyphicon glyphicon-tasks"></span>
 		    </button>
 		    <a class="navbar-brand" href="./descripcion.jsp">SISAP</a>
 		  </div>

@@ -12,6 +12,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -32,18 +33,6 @@ public class ServletVerUsuario extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet ServletVerUsuario</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet ServletVerUsuario at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
-        }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -73,6 +62,31 @@ public class ServletVerUsuario extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
+        
+        HttpSession session=request.getSession(true);
+        request.setCharacterEncoding("ISO-8859-1");//Línea para que se ingresen de forma correcta los caracteres.
+        response.setContentType("text/html;charset=ISO-8859-1");
+        PrintWriter out=response.getWriter();
+        
+        Integer idActive=Integer.parseInt(new String(request.getParameter("idUsuario").getBytes("ISO-8859-1"),"UTF-8"));
+        
+        ActiveDB activeDB=(ActiveDB)session.getAttribute("activeDB");
+        if(activeDB==null){
+            activeDB=new ActiveDB();
+        }
+        
+        UsersDB userDB=(UsersDB)session.getAttribute("userDB");
+        if(userDB==null){
+            userDB=new UsersDB();
+        }
+        
+        Activo active=activeDB.searchActiveId(idActive);
+        
+        if(active.getTipo().getIdTipo().equals(1)){
+            session.setAttribute("activeDB", activeDB);
+            out.print(Table.returnSeeInfoAuto(active, userDB));
+            session.setAttribute("userDB", userDB);
+        }
     }
 
     /**

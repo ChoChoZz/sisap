@@ -168,7 +168,7 @@
 								</tr>
 								<tr>
 									<td>aespina@ipn.com.mx</td>
-									<td>Arturo Jonathan Espina Vyeira</td>
+									<td>Arturo Jonathan Espina Vieyra</td>
 									<td>ESCOM</td>
 									<td>Estudiante</td>
 									<td>
@@ -224,7 +224,7 @@
 	    </div>
 
         </div>
-		<!--Ventanas modales-->
+<!--Ver Ventanas modales-->
 		<div class="modal fade bs-example-modal-lg info" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
 		  <div class="modal-dialog modal-lg">
 		    <div class="modal-content">
@@ -232,46 +232,7 @@
 		      	<div class="col-xs-1"></div>
 		      	<div class="col-xs-10">
 		      		<h5 id="instrucciones">Informaci&oacute;n del usuario</h5>
-		      		<form class="form-horizontal" role="form" action="">
-		      			<div class="form-group">
-						    <label for="nombre" class="col-lg-3 control-label" >Nombre:</label>
-						    <h6 id="nombre" class="col-lg-9 text-left" >Gerar Haran Rodr&iacute;guez Molina</h6>
-						</div>
-						<div class="form-group">
-						    <label for="correo" class="col-lg-3 control-label" >Email:</label>
-						    <h6 id="correo" class="col-lg-9 text-left" >ghrodriguez@ipn.com.mx</h6>
-						</div>
-						<div class="form-group">
-						    <label for="tipo" class="col-lg-3 control-label" >Tipo:</label>
-						    <h6 id="tipo" class="col-lg-9 text-left" >Alumno</h6>
-						</div>
-						<div class="form-group">
-						    <label for="plantel" class="col-lg-3 control-label" >Plantel:</label>
-						    <h6 id="plantel" class="col-lg-9 text-left" >ESCOM</h6>
-						</div>
-						<div class="form-group">
-						    <label for="identificador" class="col-lg-3 control-label" >Identificador:</label>
-						    <h6 id="identificador" class="col-lg-9 text-left" >2011630592</h6>
-						</div>
-						<div class="form-group">
-						    <label for="sexo" class="col-lg-3 control-label" >Sexo:</label>
-						    <h6 id="sexo" class="col-lg-9 text-left" >Masculino</h6>
-						</div>
-						<div class="form-group">
-						    <label for="edad" class="col-lg-3 control-label" >Edad:</label>
-						    <h6 id="edad" class="col-lg-9 text-left" >18 años</h6>
-						</div>
-						<div class="form-group">
-						    <label for="telefono" class="col-lg-3 control-label" >Tel&eacute;fono fijo:</label>
-						    <h6 id="telefono" class="col-lg-3 text-left" >47518868</h6>
-						    <label for="telefono" class="col-lg-3 control-label" >Tel&eacute;fono m&oacute;vil:</label>
-						    <h6 id="telefono" class="col-lg-3 text-left" >5526780067</h6>
-						</div>
-						<div class="form-group">
-						    <label for="tipoSangre" class="col-lg-3 control-label" >Tipo de sangre:</label>
-						    <h6 id="tipoSangre" class="col-lg-9 text-left" >O positivo</h6>
-						</div>
-		      		</form>
+		      		<div id="infoUsuario"></div>
 		      	</div>
 		      	<div class="col-xs-1"></div>
 		      </div>
@@ -280,7 +241,7 @@
 		</div>
 
 		
-		<!--Ventanas modales-->
+<!-- Editar Ventanas modales-->
 		<div class="modal fade bs-example-modal-lg edicion" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
 		  <div class="modal-dialog modal-lg">
 		    <div class="modal-content">
@@ -288,144 +249,7 @@
 		      	<div class="col-xs-1"></div>
 		      	<div class="col-xs-10">
 		      		<h5 id="instrucciones">Editar informaci&oacute;n de usuario</h5>
-		      		<form class="form-horizontal" role="form">
-					  
-					  <div class="form-group">
-					    <label for="identificador" class="col-lg-2 control-label">Nombre:</label>
-					    <div class="col-lg-4">
-					      <input type="text" class="form-control" id="identificador" placeholder="Nombre(s):" required title="Ingresa un nombre">
-					    </div>
-					    <div class="col-lg-3">
-					      <input type="text" class="form-control" id="identificador" placeholder="Primer apellido" required title="Ingresa el primer apellido">
-					    </div>
-					    <div class="col-lg-3">
-					      <input type="text" class="form-control" id="identificador" placeholder="Segundo apellido" required title="Ingresa un segundo apellido">
-					    </div>
-
-					  </div>
-					  <div class="row" id="tipoSelect">
-					  			<label for="alumno" class="col-lg-2 control-label">Tipo:</label>
-					  		<div class="col-lg-10">
-							  <div class="input-group ">
-						      <span class="input-group-addon">
-						        <input type="radio" id="alumno" name="tipo" class="text-cen" required>
-						        <label for="alumno">Alumno</label>
-						      </span>
-
-						      <span class="input-group-addon">
-						        <input type="radio" id="docente" name="tipo">
-						        <label for="docente">Docente</label>
-						      </span>
-						      
-						      <span class="input-group-addon">
-						        <input type="radio" id="administrativo" name="tipo">
-						        <label for="administrativo">Administrativo</label>
-						      </span>
-
-						      <span class="input-group-addon">
-						        <input type="radio" id="seguridad" name="tipo">
-						        <label for="seguridad">Seguridad</label>
-						      </span>
-
-						      </div><!-- /input-group -->
-						    </div>
-				      </div>
-
-				      <div class="form-group">
-					    <label for="institucion" class="col-lg-2 control-label">Plantel:</label>
-					    <div class="col-lg-10">
-					      <select name="" id="" class="form-control">
-					      		<option>ESCOM</option>
-					      	<option>ESIA</option>
-					      	<option>ESIA Tecamachalco</option>
-							<option>ESIME TICOMAN</option>
-					      </select>
-					    </div>
-					  </div>
-					
-					<div class="form-group">
-					    <label for="boleta" class="col-lg-2 control-label">Identificador:</label>
-					    <div class="col-lg-10">
-					      <input type="text" class="form-control" id="boleta" placeholder="Boleta" required>
-					    </div>
-					  </div>
-
-					  <div class="form-group">
-					    <label for="correo" class="col-lg-2 control-label">Correo:</label>
-					    <div class="col-lg-10">
-					      <input type="email" class="form-control" id="correo" placeholder="grodriguez@ipn.com.mx" disabled>
-					    </div>
-					  </div>
-
-					
-					  <div class="form-group">
-					    <label for="contrasenia1" class="col-lg-2 control-label">Contrase&ntilde;a:</label>
-					    <div class="col-lg-5">
-					      <input type="password" class="form-control" id="contrasenia1" placeholder="Contrase&ntilde;a 1">
-					    </div>
-					    <div class="col-lg-5">
-					      <input type="password" class="form-control" id="contrasenia2" placeholder="Contrase&ntilde;a 2">
-					    </div>
-					  </div>
-
-					<div class="form-group">
-					    <label for="" class="col-lg-2 control-label">Sexo:</label>
-					    <div class="col-lg-10">
-							  <div class="input-group ">
-						      <span class="input-group-addon">
-						        <input type="radio" id="Femenino" name="tipo" class="text-cen" required value="femenino">
-						        <label for="Femenino">Femenino</label>
-						      </span>
-
-						      <span class="input-group-addon">
-						        <input type="radio" id="docente" name="" value="masculino">
-						        <label for="docente">Masculino</label>
-						      </span>
-							</div>
-						</div>
-					</div>
-
-					<div class="form-group">
-					    <label for="edad" class="col-lg-2 control-label">Edad:</label>
-					    <div class="col-lg-10">
-					      <input type="number" class="form-control" id="edad" placeholder="18" min="15" required>
-					    </div>
-					  </div>
-
-					<div class="form-group">
-					    <label for="telefonoFijo" class="col-lg-2 control-label">Tel&eacute;fono:</label>
-					    <div class="col-lg-5">
-					      <input type="text" class="form-control" id="telefonoFijo" placeholder="Telefono fijo">
-					    </div>
-					    <div class="col-lg-5">
-					      <input type="text" class="form-control" id="telefonoMovil" placeholder="Telefono m&oacute;vil">
-					    </div>
-					  </div>
-
-					<div class="form-group">
-						<label for="tipoDeSangre" class="col-lg-3 control-label">Tipo de sangre:</label>
-					    <div class="col-lg-5">
-					      	<select name="tipoDeSangre" id="tipoDeSangre" class="form-control">
-					      		<option value="O-">O-</option>
-						      	<option value="O+">O+</option>
-						      	<option value="A-">A-</option>
-								<option value="A+">A+</option>
-								<option value="B-">B-</option>
-								<option value="B+">B+</option>
-								<option value="AB-">AB-</option>
-								<option value="AB+">AB+</option>
-						    </select>
-					    </div>
-					</div>
-					  <div class="form-group" id="botones">
-					    <div class="col-lg-offset-2 col-lg-1">
-					      <a class="btn btn-danger confirm" href="#" onclick="bootbox.confirm();">Cancelar</a>
-					    </div>
-					    <div class="col-lg-offset-6 col-lg-1">
-					      <button type="submit" class="btn btn-success">Aceptar</button>
-					    </div>
-					  </div>
-					</form>
+                                <div id="updateUsuario"></div>
 		      	</div>
 		      	<div class="col-xs-1"></div>
 		      </div>
@@ -456,7 +280,7 @@
 	    <script>
 	        $("a.confirm").click(function(e) {
 			    e.preventDefault();
-			    bootbox.confirm("¿Desea cancelar la operaci&oacute;n?", function(confirmed) {
+			    bootbox.confirm("�Desea cancelar la operaci&oacute;n?", function(confirmed) {
 			        console.log("El resultado fue: "+confirmed);
 			        if(confirmed==false){
 
@@ -467,5 +291,27 @@
 			    });
 			});
 	    </script>
+            
+            <!--Script para Ver-->
+            <script>
+                function ver() {
+                    idUsuario = $('#idUsuario').val();
+                    $.post('../ServletVerUsuario', {
+                        idUsuario: idUsuario
+                    }, function (responseText) {
+                        $('#infoUsuario').html(responseText);
+                    });
+                }
+            </script>
+            
+            <script>
+                function editar(idUsuario) {
+                    $.post('../ServletEditarUsuario', {
+                        idUsuario: idUsuario
+                    }, function (responseText) {
+                        $('#updateUsuario').html(responseText);
+                    });
+                }
+            </script>
 </body>
 </html>
