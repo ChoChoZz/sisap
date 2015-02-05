@@ -120,7 +120,7 @@
 					    </div>
 					  </div>
 
-				      <div class="form-group">
+                                        <div class="form-group">
 					    <label for="institucion" class="col-lg-2 control-label">Tipo:</label>
 					    <div class="col-lg-10">
 					      <select name="tipo" id="tipo" class="form-control">
@@ -132,7 +132,7 @@
                                                   <option value="6">Otro</option>
 					      </select>
 					    </div>
-					  </div>
+                                        </div>
 					
 					<div class="form-group">
 					    <label for="boleta" class="col-lg-2 control-label">Direcci&oacute;n:</label>

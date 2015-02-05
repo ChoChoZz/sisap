@@ -15,7 +15,6 @@ import org.hibernate.Transaction;
  * @author Aiko
  */
 public class ConectDB {
-
     protected Session sessionUsers;
     protected Session sessionWeb;
     protected Transaction transactionUsers;
@@ -28,7 +27,6 @@ public class ConectDB {
     }
 
     public void initOperationWeb() throws HibernateException {
-
         sessionWeb = HibernateUtil.getSessionFactoryWeb().openSession();
         transactionWeb = sessionWeb.beginTransaction();
     }

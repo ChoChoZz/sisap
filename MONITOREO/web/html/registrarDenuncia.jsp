@@ -162,11 +162,11 @@
 							<label for="donde" class="col-lg-3 control-label">¿Donde sucedio?</label>
 							<div class="col-lg-9">
 						      <select name="plantel" id="plantel" class="form-control">
-                                                                <option value="1">Plantel 1</option>
-						      		<option value="2">Plantel 2</option>
-                                                                <option value="3">Plantel 3</option>
-                                                                <option value="4">Plantel 4</option>
-                                                                <option value="5">Plantel 5</option>
+                                                                <option value="1">ESCOM</option>
+						      		<option value="2">UPITA</option>
+                                                                <option value="3">ESIME ZACATENCO</option>
+                                                                <option value="4">ESIA ZACATENCO</option>
+                                                                <option value="5">UPIBI</option>
 						      </select>
 						    </div>
 						</div>
